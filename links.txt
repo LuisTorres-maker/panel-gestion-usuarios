@@ -1,0 +1,29 @@
+===========================================================
+ACTIVIDAD 1 - CORTE 2
+PANEL DE GESTION DE USUARIOS
+===========================================================
+
+Nombre del estudiante: Luis Angel Torres Jimenez
+Programa / Grupo:      Ingeniería de Sistemas / T01
+
+-----------------------------------------------------------
+LINK DEL REPOSITORIO (GitHub - publico)
+-----------------------------------------------------------
+https://github.com/LuisTorres-maker/panel-gestion-usuarios.git
+
+-----------------------------------------------------------
+LINK DEL DESPLIEGUE (GitHub Pages)
+-----------------------------------------------------------
+https://luistorres-maker.github.io/panel-gestion-usuarios/
+-----------------------------------------------------------
+ARCHIVOS DEL PROYECTO
+-----------------------------------------------------------
+- index.html   : estructura (formulario, buscador, tabla, mensajes)
+- estilos.css  : diseno responsive (Flexbox, Grid y 3 media queries)
+- script.js    : logica en JavaScript, comentada
+
+-----------------------------------------------------------
+API CONSUMIDA
+-----------------------------------------------------------
+https://jsonplaceholder.typicode.com/users
+(Se requiere conexion a internet para que carguen los usuarios.)
