@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- meta viewport: indispensable para el diseño responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Gestión de Usuarios</title>
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>Panel de Gestión de Usuarios</h1>
+    <p class="subtitulo">Datos cargados desde la API JSONPlaceholder</p>
+  </header>
+
+  <main class="contenedor">
+
+    <!-- ============ FORMULARIO ============ -->
+    <section class="tarjeta" aria-labelledby="tituloFormulario">
+      <h2 id="tituloFormulario">Registrar usuario</h2>
+
+      <form id="formularioUsuario" novalidate>
+        <div class="campos">
+          <div class="campo">
+            <label for="id">ID</label>
+            <input type="number" id="id" name="id" placeholder="Ej: 15" />
+          </div>
+
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="text" id="correo" name="correo" placeholder="Ej: ana@correo.com" />
+          </div>
+
+          <div class="campo">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ej: Bogotá" />
+          </div>
+        </div>
+
+        <div class="acciones-form">
+          <!-- El texto de este botón cambia entre "Agregar usuario" y "Guardar cambios" -->
+          <button type="submit" id="botonEnviar" class="btn btn-primario">Agregar usuario</button>
+          <button type="button" id="botonCancelar" class="btn btn-secundario oculto">Cancelar edición</button>
+        </div>
+      </form>
+
+      <!-- Espacio para mensajes de estado: cargando, errores y confirmaciones -->
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- ============ BUSCADOR + TABLA ============ -->
+    <section class="tarjeta" aria-labelledby="tituloLista">
+      <div class="cabecera-lista">
+        <h2 id="tituloLista">Usuarios registrados</h2>
+        <span id="contador" class="contador">0 usuarios</span>
+      </div>
+
+      <div class="campo">
+        <label for="buscador">Buscar por nombre</label>
+        <input type="search" id="buscador" placeholder="Escribe un nombre..." />
+      </div>
+
+      <div class="tabla-envoltorio">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Ciudad</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <!-- tbody vacío: JavaScript lo llena dinámicamente -->
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+
+      <!-- Resumen generado con un bucle: cuántos usuarios hay por ciudad -->
+      <p id="resumenCiudades" class="resumen"></p>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Actividad 1 &mdash; Corte 2 &middot; JavaScript: DOM, eventos, fetch, async/await, map y filter</p>
+  </footer>
+
+  <!-- JavaScript externo, enlazado antes de cerrar body -->
+  <script src="script.js"></script>
+</body>
+</html>
